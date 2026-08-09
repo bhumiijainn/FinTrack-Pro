@@ -1,226 +1,268 @@
-
-# 💰 FinTrack Pro
+<h1 align="center">💰 FinTrack Pro</h1>
 
 <p align="center">
-  <b>Personal Finance Manager built with Python and Tkinter</b>
+  <strong>Personal Finance Management • Desktop Application • Financial Tracking</strong>
 </p>
 
 <p align="center">
-
-![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Tkinter](https://img.shields.io/badge/GUI-Tkinter-FFB000?style=for-the-badge)
-![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![GitHub](https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Tkinter-GUI-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Tkinter">
+  <img src="https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+  <img src="https://img.shields.io/badge/Matplotlib-Charts-11557C?style=for-the-badge" alt="Matplotlib">
+  <img src="https://img.shields.io/badge/Desktop%20Application-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Desktop Application">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
 </p>
 
 ---
 
 ## 📌 Overview
 
-**FinTrack Pro** is a desktop-based personal finance management application developed using **Python and Tkinter**.
+**FinTrack Pro** is a Python-based personal finance management desktop application built using **Tkinter** with a local **SQLite database**.
 
-The application provides a centralized interface for managing personal financial information, including income, expenses, budgets, reports, charts, transaction searches, and account authentication.
+The application provides a centralized interface for managing personal financial information, including income, expenses, budgets, reports, charts, and transaction searches.
 
-The project focuses on building a structured desktop application with a graphical user interface and persistent database storage.
+The project follows a modular structure with separate authentication, dashboard, database, reusable UI components, and application pages.
 
 ---
 
-## ✨ Features
+## 🎯 Objectives
+
+- 💰 Manage personal income and expenses
+- 📊 Provide a financial overview through a dashboard
+- 🎯 Manage monthly budgets
+- 📈 Visualize financial information through charts
+- 🔎 Search stored transactions
+- 📑 Generate financial reports
+- 👤 Support user accounts and profiles
+- ⚙️ Store user-specific settings
+- 💾 Maintain financial data using SQLite
+
+---
+
+## ✨ Key Features
 
 ### 🔐 Authentication
-- Create a new user account
-- Login using username and password
-- Logout functionality
+
+- User registration
+- User login
+- User-specific data handling
+- Profile management
 
 ### 📊 Dashboard
-- View current balance
-- Track total income
-- Track total expenses
-- View available savings
-- Display recent transactions
-- View monthly financial summary
 
-### 💰 Income Management
-- Add income transactions
-- Select income categories
-- Enter transaction amount
-- Record transaction date
-- Add descriptions
-- View recent income records
+- Financial overview
+- Summary statistics
+- Transaction information
+- Navigation to major application modules
+
+### 💵 Income Management
+
+- Add income records
+- Categorize income
+- Store transaction dates
+- Maintain transaction descriptions
 
 ### 💸 Expense Management
-- Add expense transactions
-- Select expense categories
-- Enter expense amount
-- Record transaction date
-- Add descriptions
-- View recent expenses
 
-### 📑 Reports
-- Generate transaction reports
-- Filter transactions by date
-- Filter report type
-- View income and expense summaries
-- Calculate net balance
-- Export reports
-
-### 📈 Charts & Analytics
-- Visualize income and expenses
-- Generate financial charts
-- Compare income against expenses
-
-### 🔎 Transaction Search
-- Search financial transactions
-- Search by keyword
-- Filter search results
-- View matching transaction records
+- Add expense records
+- Categorize expenses
+- Track amounts
+- Store transaction dates and descriptions
 
 ### 🎯 Budget Management
-- Create monthly budgets
-- Select budget categories
-- Set budget amounts
-- Track total budget
-- Monitor expenses against budget
-- View remaining budget
+
+- Create budgets by category
+- Set monthly budget values
+- Track budget information
+
+### 📈 Charts
+
+- Visualize financial information
+- Analyze income and expenses
+- Present financial data graphically
+
+### 📑 Reports
+
+- View financial transaction information
+- Generate summaries from stored financial data
+
+### 🔎 Search
+
+- Search financial transactions
+- Filter stored transaction information
 
 ### ⚙️ Settings
-- Application settings
-- User-related configuration
+
+- Currency preference
+- Theme preference
+- Notification settings
 
 ---
 
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
-|------------|---------|
-| 🐍 Python | Core application development |
+|---|---|
+| 🐍 Python | Core application logic |
 | 🖥️ Tkinter | Desktop graphical user interface |
 | 🗄️ SQLite | Local database storage |
-| 📊 Matplotlib | Data visualization |
-| 🧩 Object-Oriented Python | Application structure and components |
+| 📊 Matplotlib | Financial charts and visualization |
+| 📦 Python Standard Library | Application utilities |
 
 ---
 
-## 🏗️ Project Structure
+## 🏗️ Application Architecture
 
 ```text
-FinTrack-Pro/
-│
-├── assets/
-│
-├── database/
-│   ├── __init__.py
-│   └── database.py
-│
-├── screenshots/
-│   ├── Login.png
-│   ├── Create_Account.png
-│   ├── Dashboard.png
-│   ├── Income.png
-│   ├── Expense.png
-│   ├── Reports.png
-│   ├── Charts.png
-│   ├── Budget.png
-│   └── Logout.png
-│
-├── src/
-│   ├── components/
-│   ├── models/
-│   ├── pages/
-│   │   ├── budget.py
-│   │   ├── charts.py
-│   │   ├── dashboard_page.py
-│   │   ├── expense.py
-│   │   ├── income.py
-│   │   ├── profile.py
-│   │   ├── reports.py
-│   │   ├── search.py
-│   │   └── settings.py
-│   │
-│   ├── utils/
-│   ├── auth.py
-│   ├── dashboard.py
-│   └── navigation.py
-│
-├── main.py
-├── requirements.txt
-├── LICENSE
-└── README.md
-````
-
----
-
-## 🚀 Getting Started
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/bhumiijainn/FinTrack-Pro.git
-```
-
-Move into the project directory:
-
-```bash
-cd FinTrack-Pro
+                    FinTrack Pro
+                         │
+                         ▼
+                  ┌─────────────┐
+                  │   main.py   │
+                  └──────┬──────┘
+                         │
+                         ▼
+                  ┌─────────────┐
+                  │ Authentication│
+                  │    Screen     │
+                  └──────┬────────┘
+                         │
+                         ▼
+                  ┌─────────────┐
+                  │  Dashboard  │
+                  └──────┬──────┘
+                         │
+       ┌─────────────────┼─────────────────┐
+       ▼                 ▼                 ▼
+    Income            Expense           Budget
+       │                 │                 │
+       └─────────────────┼─────────────────┘
+                         ▼
+                  ┌─────────────┐
+                  │   Reports   │
+                  └──────┬──────┘
+                         │
+                         ▼
+                  ┌─────────────┐
+                  │   Charts    │
+                  └──────┬──────┘
+                         │
+                         ▼
+                  ┌─────────────┐
+                  │   Search    │
+                  └─────────────┘
+                         │
+                         ▼
+                  ┌─────────────┐
+                  │   SQLite    │
+                  │   Database  │
+                  └─────────────┘
 ```
 
 ---
 
-### 2️⃣ Create a Virtual Environment
+## 💾 Database
 
-#### Windows
+FinTrack Pro uses **SQLite** for local data storage.
 
-```bash
-python -m venv venv
-```
+The application initializes the database automatically through the `DatabaseManager` class.
 
-Activate it:
+### 📊 Database Overview
 
-```bash
-venv\Scripts\activate
-```
+| Property | Details |
+|---|---|
+| 🗄️ Database | SQLite |
+| 📁 Database Location | `database/finance.db` |
+| 👤 User Data | `users` table |
+| 💰 Financial Transactions | `transactions` table |
+| 🎯 Budgets | `budgets` table |
+| ⚙️ User Settings | `settings` table |
 
-#### macOS / Linux
+### 📋 Database Tables
 
-```bash
-python3 -m venv venv
-```
+#### 👤 Users
 
-Activate it:
+Stores account information such as:
 
-```bash
-source venv/bin/activate
+- Username
+- Password
+- Full name
+- Email
+- Phone
+- Account creation time
+
+#### 💳 Transactions
+
+Stores financial transaction information including:
+
+- Transaction ID
+- User ID
+- Transaction type
+- Category
+- Amount
+- Description
+- Date
+- Creation timestamp
+
+#### 🎯 Budgets
+
+Stores budget information including:
+
+- Budget ID
+- User ID
+- Category
+- Budget amount
+- Month
+- Creation timestamp
+
+#### ⚙️ Settings
+
+Stores user-specific preferences such as:
+
+- Currency
+- Theme
+- Notifications
+
+> 📌 The application creates these four tables when the database is initialized.
+
+---
+
+## 🔄 Application Workflow
+
+```text
+Launch Application
+        │
+        ▼
+Authentication
+        │
+        ├── New User ──► Create Account
+        │
+        └── Existing User ──► Login
+                              │
+                              ▼
+                         Dashboard
+                              │
+             ┌────────────────┼────────────────┐
+             ▼                ▼                ▼
+           Income          Expense           Budget
+             │                │                │
+             └────────────────┼────────────────┘
+                              ▼
+                          Reports
+                              │
+                              ▼
+                           Charts
+                              │
+                              ▼
+                           Search
+                              │
+                              ▼
+                           Logout
 ```
 
 ---
 
-### 3️⃣ Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-> **Note:** The current repository's `requirements.txt` is empty, so the application primarily relies on Python's standard-library components. ([GitHub][2])
-
----
-
-### 4️⃣ Run the Application
-
-From the project root directory:
-
-```bash
-python main.py
-```
-
-The application will open as a desktop window.
-
-The repository's `main.py` creates the Tkinter root window, initializes the database manager, loads the authentication screen and starts the Tkinter event loop. ([GitHub][3])
-
----
-
-## 🖥️ Application Screenshots
+## 📸 Application Screenshots
 
 ### 🔐 Login
 
@@ -228,7 +270,7 @@ The repository's `main.py` creates the Tkinter root window, initializes the data
 
 ---
 
-### 📝 Create Account
+### 👤 Create Account
 
 ![Create Account](screenshots/Create_Account.png)
 
@@ -240,13 +282,13 @@ The repository's `main.py` creates the Tkinter root window, initializes the data
 
 ---
 
-### 💰 Income Management
+### 💵 Income
 
 ![Income](screenshots/Income.png)
 
 ---
 
-### 💸 Expense Management
+### 💸 Expense
 
 ![Expense](screenshots/Expense.png)
 
@@ -258,13 +300,19 @@ The repository's `main.py` creates the Tkinter root window, initializes the data
 
 ---
 
-### 📈 Charts & Analytics
+### 📈 Charts
 
 ![Charts](screenshots/Charts.png)
 
 ---
 
-### 🎯 Budget Planner
+### 🔎 Search / Transactions
+
+![Search](screenshots/Search.png)
+
+---
+
+### 🎯 Budget
 
 ![Budget](screenshots/Budget.png)
 
@@ -276,135 +324,220 @@ The repository's `main.py` creates the Tkinter root window, initializes the data
 
 ---
 
-## 🔄 Application Workflow
+## 📁 Repository Structure
 
 ```text
-             ┌─────────────────┐
-             │   Start FinTrack │
-             │       Pro        │
-             └────────┬────────┘
-                      │
-                      ▼
-             ┌─────────────────┐
-             │ Authentication  │
-             │ Login / Signup  │
-             └────────┬────────┘
-                      │
-                      ▼
-             ┌─────────────────┐
-             │    Dashboard    │
-             └────────┬────────┘
-                      │
-        ┌─────────────┼─────────────┐
-        ▼             ▼             ▼
-     Income        Expense        Budget
-        │             │             │
-        └─────────────┼─────────────┘
-                      ▼
-             ┌─────────────────┐
-             │    Database     │
-             │    Storage      │
-             └────────┬────────┘
-                      │
-          ┌───────────┼───────────┐
-          ▼           ▼           ▼
-       Reports      Charts      Search
+FinTrack-Pro/
+│
+├── 📂 assets/
+│
+├── 📂 database/
+│   ├── __init__.py
+│   └── database.py
+│
+├── 📂 screenshots/
+│   ├── 🖼️ Budget.png
+│   ├── 🖼️ Charts.png
+│   ├── 🖼️ Create Account.png
+│   ├── 🖼️ Dashboard.png
+│   ├── 🖼️ Expense.png
+│   ├── 🖼️ Income.png
+│   ├── 🖼️ Login.png
+│   ├── 🖼️ Logout.png
+│   └── 🖼️ Reports.png
+│
+├── 📂 src/
+│   ├── 📂 components/
+│   │   ├── card.py
+│   │   ├── dialog.py
+│   │   ├── header.py
+│   │   ├── sidebar.py
+│   │   ├── stats_card.py
+│   │   └── table.py
+│   │
+│   ├── 📂 models/
+│   │
+│   ├── 📂 pages/
+│   │   ├── budget.py
+│   │   ├── charts.py
+│   │   ├── dashboard_page.py
+│   │   ├── expense.py
+│   │   ├── income.py
+│   │   ├── profile.py
+│   │   ├── reports.py
+│   │   ├── search.py
+│   │   └── settings.py
+│   │
+│   ├── 📂 utils/
+│   │
+│   ├── __init__.py
+│   ├── auth.py
+│   ├── dashboard.py
+│   └── navigation.py
+│
+├── 📄 main.py
+├── 📄 requirements.txt
+├── 📄 LICENSE
+└── 📄 README.md
 ```
 
 ---
 
-## 📚 Key Modules
+## ▶️ Getting Started
 
-### `main.py`
+### 1. Clone the Repository
 
-Application entry point responsible for creating the main Tkinter window, initializing the database manager and loading authentication. ([GitHub][3])
+```bash
+git clone https://github.com/bhumiijainn/FinTrack-Pro.git
+```
 
-### `database/`
+### 2. Navigate to the Project
 
-Contains the database management layer used for persistent application data. ([GitHub][4])
+```bash
+cd FinTrack-Pro
+```
 
-### `src/auth.py`
+### 3. Check Python
 
-Handles the application's authentication interface.
+```bash
+python --version
+```
 
-### `src/dashboard.py`
+Python 3.x is recommended.
 
-Provides the dashboard-level application functionality.
+### 4. Install Dependencies
 
-### `src/pages/`
+The current `requirements.txt` file is empty, so there are currently no third-party packages listed for installation.
 
-Contains the individual application pages for:
+```bash
+pip install -r requirements.txt
+```
 
-* Dashboard
-* Income
-* Expense
-* Reports
-* Charts
-* Search
-* Budget
-* Profile
-* Settings
+> 📌 FinTrack Pro currently relies on Python's built-in Tkinter and SQLite functionality. The repository's `requirements.txt` currently contains no package entries.
 
-These modules are present in the current repository structure. ([GitHub][5])
+### 5. Run the Application
+
+```bash
+python main.py
+```
+
+The application will open as a desktop window.
 
 ---
 
-## 🎯 Learning Objectives
+## 🖥️ Application Window
 
-This project demonstrates practical implementation of:
+The application creates a **1200 × 700** Tkinter window and loads the authentication screen when started. The main entry point is `main.py`. :contentReference[oaicite:2]{index=2}
 
-* Python application development
-* Tkinter GUI development
-* Object-oriented programming
-* Desktop application architecture
-* Database integration
-* CRUD-style transaction management
-* Data visualization
-* Financial data organization
-* User authentication
-* Modular project structure
+---
+
+## 🔐 Data Storage
+
+FinTrack Pro stores data locally using SQLite.
+
+The database manager:
+
+```text
+database/database.py
+        │
+        ▼
+   finance.db
+        │
+        ├── users
+        ├── transactions
+        ├── budgets
+        └── settings
+```
+
+The database uses foreign-key relationships between users and their transactions, budgets, and settings. :contentReference[oaicite:3]{index=3}
+
+---
+
+## 🧩 Modular Design
+
+The application separates functionality into reusable modules.
+
+### Components
+
+```text
+src/components/
+│
+├── card.py
+├── dialog.py
+├── header.py
+├── sidebar.py
+├── stats_card.py
+└── table.py
+```
+
+These components provide reusable interface elements such as cards, dialogs, headers, sidebars, statistics cards, and tables. :contentReference[oaicite:4]{index=4}
+
+### Pages
+
+```text
+src/pages/
+│
+├── budget.py
+├── charts.py
+├── dashboard_page.py
+├── expense.py
+├── income.py
+├── profile.py
+├── reports.py
+├── search.py
+└── settings.py
+```
+
+The page modules separate the major financial-management features of the application. :contentReference[oaicite:5]{index=5}
+
+---
+
+## 📌 Project Highlights
+
+- 🖥️ Desktop-based finance management application
+- 🐍 Built entirely with Python
+- 🎨 Tkinter graphical user interface
+- 🗄️ SQLite local database
+- 👤 User authentication
+- 💵 Income management
+- 💸 Expense management
+- 🎯 Budget management
+- 📊 Financial charts
+- 📑 Reports
+- 🔎 Transaction search
+- ⚙️ User settings
+- 🧩 Modular application structure
 
 ---
 
 ## 🔮 Future Improvements
 
-Potential future improvements include:
-
-* 📱 Mobile version
-* ☁️ Cloud database synchronization
-* 📤 Improved CSV/Excel import and export
-* 🔔 Budget notifications
-* 🔐 Stronger authentication and password security
-* 📊 More advanced financial analytics
-* 🧾 PDF report generation
-* 💾 Automated database backup
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
+- 📤 Export financial reports to CSV and PDF
+- 📅 Add recurring transactions
+- 🔔 Add scheduled financial reminders
+- 📊 Add more advanced financial analytics
+- 💳 Add more transaction categories
+- 🔐 Improve password security and credential handling
+- 💾 Add database backup and restore
+- 📦 Package the application as a standalone executable
+- 🌐 Add optional cloud synchronization
+- 📱 Explore a cross-platform version
 
 ---
 
 ## 👩‍💻 Author
 
-**Bhumi Jain**
+### Bhumi Jain
 
-GitHub: [@bhumiijainn](https://github.com/bhumiijainn)
+<p>
+  <a href="https://github.com/bhumiijainn">
+    <img src="https://img.shields.io/badge/GitHub-bhumiijainn-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://www.linkedin.com/in/bhumi-jainn/">
+    <img src="https://img.shields.io/badge/LinkedIn-Bhumi%20Jain-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+</p>
 
 ---
 
-⭐ If you found this project useful, consider giving it a star!
-
-
-
-![Create Account](screenshots/Login.png)
-
-I'd also keep the **`MIT License` badge and the Python/Tkinter/SQLite badges**. Don't add fake badges such as "Build Passing", "CI", "Docker", "AI", or "100% Python" when you don't actually have those things. The repository currently shows an MIT license and a Python/Tkinter-based structure, so these badges accurately represent the project. ([GitHub][1]) 
-
-[1]: https://github.com/bhumiijainn/FinTrack-Pro "GitHub - bhumiijainn/FinTrack-Pro · GitHub"
-[2]: https://github.com/bhumiijainn/FinTrack-Pro/blob/main/requirements.txt "FinTrack-Pro/requirements.txt at main · bhumiijainn/FinTrack-Pro · GitHub"
-[3]: https://github.com/bhumiijainn/FinTrack-Pro/blob/main/main.py "FinTrack-Pro/main.py at main · bhumiijainn/FinTrack-Pro · GitHub"
-[4]: https://github.com/bhumiijainn/FinTrack-Pro/tree/main/database "FinTrack-Pro/database at main · bhumiijainn/FinTrack-Pro · GitHub"
-[5]: https://github.com/bhumiijainn/FinTrack-Pro/tree/main/src/pages "FinTrack-Pro/src/pages at main · bhumiijainn/FinTrack-Pro · GitHub"
+⭐ **If you find FinTrack Pro useful, consider starring the repository.**
